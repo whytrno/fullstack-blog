@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
@@ -11,6 +11,13 @@ function Login() {
     const [validation, setValidation] = useState([]);
 
     const navigate = useNavigate();
+
+    // Middleware
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            navigate('/home');
+        }
+    }, []);
 
     const loginHandler = async (e) => {
         e.preventDefault();
