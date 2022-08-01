@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 function Register() {
@@ -82,6 +82,9 @@ function Register() {
                         </div>
                         <div className="flex justify-center">
                             <button className="bg-black text-white py-2 px-8 text-center my-2">Daftar</button>
+                        </div>
+                        <div className="flex justify-center">
+                            <Link to="/register" className="bg-black text-white py-2 px-8 text-center my-2">Register</Link>
                         </div>
 
                     </form>
