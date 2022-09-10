@@ -73,4 +73,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1. npm install
 2. npm start
 3. go to backend folder
-4. php artisan serve
+4. Duplicate .env.example and change name to .env
+5. Change DB_DATABASE to backend folder
+6. Make database.sqlite file to backend folder
+7. php artisan key:migrate
+8. php artisan jwt:secret
+9. php artisan migrate
+10. php artisan serve
